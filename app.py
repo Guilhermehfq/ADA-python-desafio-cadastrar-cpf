@@ -68,7 +68,7 @@ def conte_quantidade_por_sexo(cadastros):
 def filtre_dados(cadastros, estado):
     pessoas_estado_filtrado = []
     for pessoa in cadastros.values():
-        if pessoa.estado == estado:
+        if pessoa.estado == estado.upper():
             pessoas_estado_filtrado.append(pessoa)
     return (f'Os cadastros referentes ao estado {estado} são {pessoas_estado_filtrado}')
 
